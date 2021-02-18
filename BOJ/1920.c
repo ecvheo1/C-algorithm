@@ -1,4 +1,4 @@
-// 이 탐색 (이진 검색)
+// 이분 탐색 (이진 검색)
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>

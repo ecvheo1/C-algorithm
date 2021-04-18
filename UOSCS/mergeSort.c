@@ -64,7 +64,7 @@ int main()
 	for(i=0; i < MAX_SIZE; i++)
 		printf("[%d] ", list[i]);
 		
-	
+	 
 	
 	return 0;
 }

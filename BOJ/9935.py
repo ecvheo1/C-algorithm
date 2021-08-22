@@ -12,9 +12,7 @@ for i in s:
             for _ in range(len(x)):
                 answer.pop()
 
-if len(s) == 0:
+if len(answer) == 0:
     print("FRULA")
 else:
     print("".join(answer))
-
-

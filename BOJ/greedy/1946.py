@@ -15,4 +15,4 @@ for _ in range(t):
         if a[i] < minInterview:
             count += 1
             minInterview = a[i]
-print(count)
+    print(count)

@@ -5,7 +5,7 @@ data = list(map(int, input().split()))
 index = [x for x in range(1, n + 1)]
 
 temp = data.pop(idx)
-print(index.pop(idx), end="")
+print(index.pop(idx), end=" ")
 
 while data:
     if temp < 0:
@@ -13,4 +13,4 @@ while data:
     else:
         idx = (idx + (temp - 1)) % len(data)
     temp = data.pop(idx)
-    print(index.pop(idx), end="")
+    print(index.pop(idx), end=" ")

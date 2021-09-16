@@ -13,5 +13,5 @@ for _ in range(n):
         leftValue = heapq.heappop(left)[1]
         rightValue = heapq.heappop(right)[1]
         heapq.heappush(left, (-rightValue, rightValue))
-        heapq.heappush(left, (-leftValue, leftValue))
+        heapq.heappush(right, (leftValue, leftValue))
     print(left[0][1])

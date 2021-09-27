@@ -9,6 +9,7 @@ def ripen(graph):
 
 def bfs(q, time):
     while q:
+        time += 1
         for _ in range(len(q)):
             a, b = q.popleft()
 
@@ -18,7 +19,6 @@ def bfs(q, time):
                 if (0 <= nx < n) and (0 <= ny < m) and graph[nx][ny] == 0:
                     q.append((nx, ny))
                     graph[nx][ny] = 1
-        time += 1
     return time
                     
 
@@ -34,7 +34,7 @@ if ripen(graph):
 
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
-time = 0
+time = -1
 q = deque() # 익은 토마토 큐
 
 for i in range(n):

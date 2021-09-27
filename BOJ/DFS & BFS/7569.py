@@ -3,17 +3,17 @@ from collections import deque
 
 def bfs(q, time):
     while q:
-        z, x, y = q.popleft()
-        for i in range(6):
-            nz = z + dz[i]
-            nx = x + dx[i]
-            ny = y + dy[i]
-            time += 1
-        
-        if (0 <= nz < h) and (0 <= nx < n) and (0 <= ny < m) and (box[nz][nx][ny] == 0):
-            box[nz][nx][ny] = 1
-            q.append((nz, nx, ny))
+        time += 1
+        for _ in range(len(q)):
+            z, x, y = q.popleft()
+            for i in range(6):
+                nz = z + dz[i]
+                nx = x + dx[i]
+                ny = y + dy[i]
             
+                if (0 <= nz < h) and (0 <= nx < n) and (0 <= ny < m) and (box[nz][nx][ny] == 0):
+                    box[nz][nx][ny] = 1
+                    q.append((nz, nx, ny))
     return time
 
 
@@ -31,7 +31,7 @@ dz = [-1, 1, 0, 0, 0, 0]
 dx = [0, 0, -1, 1, 0, 0]
 dy = [0, 0, 0, 0, -1, 1]
 
-time = 0
+time = -1
 time = bfs(q, time)
 
 for i in range(h):

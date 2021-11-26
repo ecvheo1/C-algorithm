@@ -27,9 +27,8 @@ def dijkstra(start):
                 heapq.heappush(q, (cost, i[0]))
 
 dijkstra(start)
-print(distance)
 
-for i in range(n):
+for i in range(1, n+1):
     if distance[i] == INF:
         print('INF')
     else:
